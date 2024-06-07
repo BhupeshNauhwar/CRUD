@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul>
-            <li class="li"> CRUD APP</li>
+            <li class="li">CRUD APP</li>
 
             <span class="option">
                 <li><a href="/">Home</a></li>
@@ -19,7 +19,6 @@
         </ul>
     </nav>
 
-    
     <table border="3">
         <thead>
             <tr>
@@ -36,14 +35,14 @@
         <tbody>
             {{#each userdata}}
                 <tr>
-                    <td>{{this._id}}</td>
-                    <td>{{this.name}}</td>
-                    <td>{{this.age}}</td>
-                    <td>{{this.phone}}</td>
-                    <td>{{this.email}}</td>
-                    <td>{{this.address}}</td>
-                    <td><a href="/edit/{{this._id}}"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                    <td><a href="/delete/{{this._id}}"><i class="fa-sharp fa-solid fa-trash"></i></a></td>
+                    <td data-label="Id">{{this._id}}</td>
+                    <td data-label="Name">{{this.name}}</td>
+                    <td data-label="Age">{{this.age}}</td>
+                    <td data-label="Mobile">{{this.phone}}</td>
+                    <td data-label="Email">{{this.email}}</td>
+                    <td data-label="Address">{{this.address}}</td>
+                    <td data-label="Edit"><a href="/edit/{{this._id}}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td data-label="Delete"><a href="/delete/{{this._id}}"><i class="fa-sharp fa-solid fa-trash"></i></a></td>
                 </tr>
             {{/each}}
         </tbody>
